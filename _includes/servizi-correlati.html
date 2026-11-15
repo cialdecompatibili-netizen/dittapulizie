@@ -19,6 +19,8 @@ GUIDA-SVILUPPO: ALTRI SERVIZI in fondo alla pagina servizio. Il numero di card s
   {%- for item in elenco -%}
     {%- assign chiave = "|" | append: item.url | append: "|" -%}
     {%- if item.url == page.url or n >= max_card -%}{%- continue -%}{%- endif -%}
+    {%- comment -%} stessa citta della pagina (o nessuna citta): le pagine base mostrano solo servizi base {%- endcomment -%}
+    {%- if item.citta != page.citta -%}{%- continue -%}{%- endif -%}
     {%- if visti contains chiave -%}{%- continue -%}{%- endif -%}
       {%- assign visti = visti | append: item.url | append: "|" -%}
       {%- assign n = n | plus: 1 -%}

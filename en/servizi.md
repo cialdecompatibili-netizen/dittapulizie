@@ -6,7 +6,7 @@ author_profile: false
 ref: servizi
 lang: en
 locale: en
-tr: tradotto
+tr: da_aggiornare
 tr_hash: u3h8wh
 permalink: /en/services/
 ---
